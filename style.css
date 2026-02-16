@@ -1,0 +1,114 @@
+@font-face {
+    font-family: bigNoodleTitling;
+    src: url("big_noodle_titling.ttf");
+}
+
+:root {
+    --tan: rgb(250, 222, 160);
+    --rust: rgb(158, 84, 23);
+    --mint: rgb(40, 150, 108);
+    --blue: rgb(40, 106, 150);
+    --purple: rgb(129, 61, 115);
+    --gray: rgb(61, 69, 78);
+}
+
+body {
+    font-family: monospace;
+    padding: 0;
+    margin: 0;
+}
+
+section {   
+    height: 100vh; 
+    margin: 0;
+    padding: 48px;
+}
+
+nav {
+    background-color: var(--tan);
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+nav ul li{
+    height: 100%;
+    width: 25%;
+    padding: 16px;;
+}
+
+#nav-sec1 {
+    background-color: var(--rust);
+}
+
+#nav-sec2 {
+    background-color: var(--mint);
+}
+
+#nav-sec3 {
+    background-color: var(--blue);
+}
+
+#nav-sec4 {
+    background-color: var(--purple);
+}
+
+nav ul li a {
+    font-size: 1.5em;
+    text-decoration: none;
+    color: var(--tan);
+}
+
+nav ul li a:hover {
+    cursor: pointer;
+    font-weight: 700;
+}
+
+h1 {
+    color: var(--tan);
+    text-align: center;
+    font-family: bigNoodleTitling;
+    font-size: 800%;
+    letter-spacing: 0.05em;
+    margin-bottom: 0;
+}
+
+p {
+    color: var(--tan);
+    font-size: 100%;
+}
+
+footer {
+    background-color: var(--gray);
+    text-align: center;
+    padding: 16px 0;
+}
+
+#section1 {
+    background-color: var(--rust);
+}
+
+#section1 h1 {
+    word-spacing: 0.13em;
+}
+
+#section2 {
+    background-color: var(--mint);
+}
+
+#section3 {
+    background-color: var(--blue);
+}
+
+#section4 {
+    background-color: var(--purple);
+}
