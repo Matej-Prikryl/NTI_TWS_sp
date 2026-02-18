@@ -81,6 +81,15 @@ p {
     font-size: 1.2em;
 }
 
+table {
+    width: 100%;
+    border: 1px solid var(--gray);
+}
+
+table .range-strings {
+    background-color: var(--mint);
+}
+
 footer {
     background-color: var(--gray);
     text-align: center;
