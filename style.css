@@ -9,7 +9,11 @@
     --mint: rgb(40, 150, 108);
     --blue: rgb(40, 106, 150);
     --purple: rgb(129, 61, 115);
-    --gray: rgb(61, 69, 78);
+    --gray: rgb(72, 80, 89);
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -25,10 +29,11 @@ section {
 }
 
 nav {
-    background-color: var(--tan);
+    background-color: white;
     position: fixed;
     top: 0;
     width: 100%;
+    box-shadow: 0 0 8px var(--gray);
 }
 
 nav ul {
@@ -42,39 +47,21 @@ nav ul {
 
 nav ul li{
     height: 100%;
-    width: 25%;
-    padding: 16px;;
-}
-
-#nav-sec1 {
-    background-color: var(--rust);
-}
-
-#nav-sec2 {
-    background-color: var(--mint);
-}
-
-#nav-sec3 {
-    background-color: var(--blue);
-}
-
-#nav-sec4 {
-    background-color: var(--purple);
+    padding: 24px;
 }
 
 nav ul li a {
     font-size: 1.5em;
     text-decoration: none;
-    color: var(--tan);
+    color: var(--gray);
 }
 
 nav ul li a:hover {
-    cursor: pointer;
     font-weight: 700;
 }
 
 h1 {
-    color: var(--tan);
+    color: var(--gray);
     text-align: center;
     font-family: bigNoodleTitling;
     font-size: 800%;
@@ -83,14 +70,14 @@ h1 {
 }
 
 h2 {
-    color: var(--tan);
+    color: var(--gray);
     font-size: 3em;
     margin-top: 2em;
     margin-bottom: 0.6em;
 }
 
 p {
-    color: var(--tan);
+    color: var(--gray);
     font-size: 1.2em;
 }
 
@@ -100,22 +87,3 @@ footer {
     padding: 16px 0;
 }
 
-#section1 {
-    background-color: var(--rust);
-}
-
-#section1 h1 {
-    word-spacing: 0.13em;
-}
-
-#section2 {
-    background-color: var(--mint);
-}
-
-#section3 {
-    background-color: var(--blue);
-}
-
-#section4 {
-    background-color: var(--purple);
-}
