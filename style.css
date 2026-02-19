@@ -4,11 +4,8 @@
 }
 
 :root {
-    --tan: rgb(250, 222, 160);
-    --rust: rgb(158, 84, 23);
-    --mint: rgb(40, 150, 108);
-    --blue: rgb(40, 106, 150);
-    --purple: rgb(129, 61, 115);
+    --strings: rgb(102, 179, 131);
+    --woods: rgb(111, 190, 221);
     --gray: rgb(72, 80, 89);
 }
 
@@ -34,6 +31,7 @@ nav {
     top: 0;
     width: 100%;
     box-shadow: 0 0 8px var(--gray);
+    z-index: 10;
 }
 
 nav ul {
@@ -79,6 +77,55 @@ h2 {
 p {
     color: var(--gray);
     font-size: 1.2em;
+}
+
+table {
+    margin-top: 6em;
+    width: 100%;
+    border: 1px solid var(--gray);
+    color: var(--gray);
+    padding: 1em;
+}
+
+td {
+    text-align: center;
+}
+
+table .label {
+    font-size: 1.2em;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    transform: rotate(-90deg);
+    width:  0;
+    z-index: 0;
+}
+
+table .instrument {
+    text-align: right;
+    width: 0;
+    padding-right: 1em;
+}
+
+table .range-strings {
+    background-color: var(--strings);
+}
+
+table .range-woods {
+    background-color: var(--woods);
+}
+
+table .h-line {
+    border-bottom: 1px solid var(--gray);
+    height: 3px;
+}
+
+table .gap {
+    height: 2px;
+}
+
+#sec-home h1{
+   font-size: 1600%; 
 }
 
 footer {
