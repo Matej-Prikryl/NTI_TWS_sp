@@ -83,7 +83,8 @@ table {
     margin-top: 6em;
     width: 100%;
     border: 1px solid var(--gray);
-    color: var(--gray)
+    color: var(--gray);
+    padding: 1em;
 }
 
 td {
@@ -112,6 +113,15 @@ table .range-strings {
 
 table .range-woods {
     background-color: var(--woods);
+}
+
+table .h-line {
+    border-bottom: 1px solid var(--gray);
+    height: 3px;
+}
+
+table .gap {
+    height: 2px;
 }
 
 #sec-home h1{
