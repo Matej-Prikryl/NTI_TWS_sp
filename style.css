@@ -4,16 +4,13 @@
 }
 
 :root {
-    --strings: rgb(102, 179, 131);
-    --woods: rgb(111, 190, 221);
+    --strings: rgb(129, 211, 129);
+    --winds: rgb(111, 190, 221);
     --percussions: rgb(240, 232, 128);
-    --synths: rgb(138, 100, 163);
+    --synths: rgb(168, 117, 202);
     --bg-color: #ffffff;
     --text-color: rgb(72, 80, 89);
     --header-bg: #ffffff;
-}
-
-@media (prefers-color-scheme: dark) {
 }
 
 .dark-mode {
@@ -38,6 +35,8 @@ section {
     min-height: 100vh; 
     margin: 0;
     padding: 48px;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
@@ -52,9 +51,48 @@ header {
     z-index: 10;
 }
 
+nav {
+    flex: 0 1 auto;
+}
+
+#menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.35rem;
+    width: 3rem;
+    height: 3rem;
+    margin-left: 1.5rem;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+#menu-toggle span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: var(--text-color);
+    border-radius: 999px;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+#menu-toggle[aria-expanded="true"] span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+#menu-toggle[aria-expanded="true"] span:nth-child(2) {
+    opacity: 0;
+}
+
+#menu-toggle[aria-expanded="true"] span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
 nav ul {
     list-style-type: none;
-    margin: 0;
+    margin: 0 2em 0 0;
     padding: 0;
     display: flex;
     justify-content: center;
@@ -77,12 +115,28 @@ nav ul li a:hover {
 }
 
 h1 {
+    position: relative;
+    align-self: center;
+    /* background-color: yellow; */
+    display: inline-block;
     color: var(--text-color);
     text-align: center;
     font-family: bigNoodleTitling;
     font-size: 800%;
     letter-spacing: 0.05em;
     margin-bottom: 0;
+}
+
+h1::after {
+    content: "";
+    display: block;
+    width: 110%;
+    height: 35%;
+    background-color: var(--text-color);
+    position: absolute;
+    left: -5%;
+    bottom: 8px;
+    z-index: -1;
 }
 
 h2 {
@@ -105,8 +159,15 @@ table {
     padding: 1em;
 }
 
-td {
+table td {
     text-align: center;
+}
+
+table caption {
+    caption-side: bottom;
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-top: 0.5em;
 }
 
 table .label {
@@ -130,7 +191,7 @@ table .range-strings {
 }
 
 table .range-woods {
-    background-color: var(--woods);
+    background-color: var(--winds);
 }
 
 table .range-percussions {
@@ -148,6 +209,16 @@ table .h-line {
 
 table .gap {
     height: 2px;
+}
+
+ol {
+    margin: 1.2em 0;
+    color: var(--text-color);
+    font-size: 1.2em;
+}
+
+ol ol {
+    font-size: 1em;
 }
 
 .instrument-list {
@@ -183,6 +254,26 @@ table .gap {
 
 #sec-home h1{
    font-size: 1600%; 
+}
+
+#sec-home h1::after {
+    display: none;
+}
+
+#sec-strings h1::after {
+    background-color: var(--strings);
+}
+
+#sec-winds h1::after {
+    background-color: var(--winds);
+}
+
+#sec-percussions h1::after {
+    background-color: var(--percussions);
+}
+
+#sec-synths h1::after {
+    background-color: var(--synths);
 }
 
 #theme-toggle {
@@ -261,21 +352,6 @@ input[type="checkbox"] {
     margin-top: 0.4rem;
 }
 
-/* button {
-    margin-top: 1rem;
-    padding: 0.75rem 1.2rem;
-    border: none;
-    border-radius: 8px;
-    background-color: var(--woods);
-    color: #fff;
-    font-size: 1rem;
-    cursor: pointer;
-}
-
-button:hover {
-    opacity: 0.9;
-} */
-
 input:focus-visible,
 button:focus-visible,
 a:focus-visible {
@@ -287,5 +363,53 @@ footer {
     background-color: var(--text-color);
     text-align: center;
     padding: 16px 0;
+}
+
+@media (max-width: 700px) {
+    header {
+        align-items: flex-start;
+        padding: 0.75rem 1rem;
+    }
+
+    nav {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #menu-toggle {
+        display: flex;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        margin-top: 0.75rem;
+    }
+
+    nav ul.is-open {
+        display: flex;
+    }
+
+    nav ul li {
+        padding: 0;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 0.9rem 0;
+        border-top: 1px solid rgba(72, 80, 89, 0.2);
+    }
+
+    #theme-toggle {
+        margin-right: 2em;
+    }
+
+    section {
+        padding-top: 7rem;
+    }
 }
 
