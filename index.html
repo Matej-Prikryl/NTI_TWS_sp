@@ -17,6 +17,13 @@
                 <li><a href="#sec-synths">SYNTHS</a></li>
             </ul>
         </nav>
+        <div>
+            <button id="theme-toggle">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"/></svg>
+
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M338.5-338.5Q280-397 280-480t58.5-141.5Q397-680 480-680t141.5 58.5Q680-563 680-480t-58.5 141.5Q563-280 480-280t-141.5-58.5ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"/></svg>
+            </button>
+        </div>
     </header>
 
     <main>
@@ -24,6 +31,7 @@
             <h1>Sonos</h1>
 
             <table>
+                <caption>Instrument Ranges</caption>
                 <tr>
                     <th></th>
                     <th></th>
@@ -38,7 +46,7 @@
                 </tr>
                 <!--STRINGS-->
                 <tr>
-                    <td rowspan="5" class="label">strings</td>
+                    <td rowspan="7" class="label">strings</td>
                     <td class="instrument">violin</td>
                     <td colspan="3"></td>
                     <td colspan="5" class="range-strings"></td>
@@ -61,6 +69,18 @@
                     <td colspan="3"></td>
                 </tr>
                 <tr>
+                    <td class="instrument">guitar</td>
+                    <td colspan="2"></td>
+                    <td colspan="5" class="range-strings"></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="instrument">bassguitar</td>
+                    <td></td>
+                    <td colspan="4" class="range-strings"></td>
+                    <td colspan="3"></td>
+                </tr>
+                <tr>
                     <td class="instrument">piano</td>
                     <td colspan="8" class="range-strings"></td>
                 </tr>
@@ -68,7 +88,7 @@
                 <tr><td colspan="10" class="gap"></td></tr>
                 <!--WINDS-->
                 <tr>
-                    <td rowspan="4" class="label">winds</td>
+                    <td rowspan="7" class="label">winds</td>
                     <td class="instrument">piccolo</td>
                     <td colspan="5"></td>
                     <td colspan="3" class="range-woods"></td>
@@ -90,7 +110,91 @@
                     <td colspan="5" class="range-woods"></td>
                     <td colspan="2"></td>
                 </tr>
+                <tr>
+                    <td class="instrument">trumpet</td>
+                    <td colspan="3"></td>
+                    <td colspan="4" class="range-woods"></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="instrument">trombone</td>
+                    <td colspan="2"></td>
+                    <td colspan="4" class="range-woods"></td>
+                    <td colspan="2"></td>
+                </tr>
+                <tr>
+                    <td class="instrument">tuba</td>
+                    <td></td>
+                    <td colspan="4" class="range-woods"></td>
+                    <td colspan="3"></td>
+                </tr>
+                <tr><td colspan="10" class="h-line"></td></tr>
+                <tr><td colspan="10" class="gap"></td></tr>
+                <!--PERCUSSIONS-->
+                <tr>
+                    <td rowspan="3" class="label">perc.</td>
+                    <td class="instrument">timpani</td>
+                    <td colspan="2"></td>
+                    <td colspan="2" class="range-percussions"></td>
+                    <td colspan="4"></td>
+                </tr>
+                <tr>
+                    <td class="instrument">xylophone</td>
+                    <td colspan="4"></td>
+                    <td colspan="4" class="range-percussions"></td>
+                </tr>
+                <tr>
+                    <td class="instrument">marimba</td>
+                    <td colspan="2"></td>
+                    <td colspan="6" class="range-percussions"></td>
+                </tr>
+                <tr><td colspan="10" class="h-line"></td></tr>
+                <tr><td colspan="10" class="gap"></td></tr>
+                <!--SYNTHS-->
+                <tr>
+                    <td rowspan="6" class="label">synths</td>
+                    <td class="instrument">Minimoog</td>
+                    <td colspan="8" class="range-synths"></td>
+                </tr>
+                <tr>
+                    <td class="instrument">Juno-106</td>
+                    <td colspan="8" class="range-synths"></td>
+                </tr>
+                <tr>
+                    <td class="instrument">DX7</td>
+                    <td colspan="8" class="range-synths"></td>
+                </tr>
+                <tr>
+                    <td class="instrument">M1</td>
+                    <td colspan="8" class="range-synths"></td>
+                </tr>
+                <tr>
+                    <td class="instrument">Serum</td>
+                    <td colspan="8" class="range-synths"></td>
+                </tr>
+                <tr>
+                    <td class="instrument">Massive</td>
+                    <td colspan="8" class="range-synths"></td>
+                </tr>
             </table>
+
+            <h2>7 Steps to Start Your Music Journey</h2>
+            <ol>
+                <li>Discover your musical interests (classical, rock, jazz, etc.)</li>
+                <li>Consider your budget for instruments and lessons</li>
+                <li>Choose an instrument category
+                    <ol>
+                        <li>Strings (violin, guitar)</li>
+                        <li>Winds (flute, trumpet)</li>
+                        <li>Percussion (drums, xylophone)</li>
+                        <li>Synths (keyboard, software)</li>
+                    </ol>
+                </li>
+                <li>Try out several instruments in person</li>
+                <li>Think about physical requirements (size, strength)</li>
+                <li>Find a qualified teacher</li>
+                <li>Begin with regular practice</li>
+            </ol>
         </section>
         <section id="sec-strings">
             <h1>Strings</h1>
@@ -121,36 +225,43 @@
             </ul>
 
             <h2>Violin</h2>
+            <img src="img/instruments/violin_icon.png" alt="Violin icon" class="instrument-icon">
             <p>
                 The smallest and highest-pitched member of the string family, the violin is celebrated for its bright, singing tone. It is a versatile lead instrument, essential in both classical orchestras and various folk traditions worldwide.
             </p>
 
             <h2>Viola</h2>
+            <img src="img/instruments/viola_icon.png" alt="Viola icon" class="instrument-icon">
             <p>
                 Often mistaken for the violin, the viola is slightly larger and produces a deeper, mellower sound. It provides a rich harmonic middle voice in string ensembles, bridging the gap between the high violins and the lower cellos.
             </p>
 
             <h2>Violoncello</h2>
+            <img src="img/instruments/cello_icon.png" alt="Violoncello icon" class="instrument-icon">
             <p>
                 Commonly known as the cello, this instrument is played seated and is beloved for its deep, soulful resonance that closely mimics the range of the human voice. It serves as both a powerful melodic soloist and a foundational bass element.
             </p>
 
             <h2>Bass</h2>
+            <img src="img/instruments/bass_icon.png" alt="Bass icon" class="instrument-icon">
             <p>
                 Also called the double bass or upright bass, it is the largest and lowest-pitched bowed string instrument. Its massive body creates the deep, thumping vibrations that provide the rhythmic and harmonic floor for orchestras and jazz bands alike.
             </p>
 
             <h2>Guitar</h2>
+            <img src="img/instruments/guitar_icon.png" alt="Guitar icon" class="instrument-icon">
             <p>
                 A popular fretted instrument that can be acoustic or electric, the guitar produces sound by plucking or strumming six strings. Its portability and wide range of styles—from classical to heavy metal—make it one of the most iconic instruments in modern music.
             </p>
 
             <h2>Bassguitar</h2>
+            <img src="img/instruments/bassguitar_icon.png" alt="Bass guitar icon" class="instrument-icon">
             <p>
                 Unlike the upright bass, the bass guitar is held horizontally and usually features four thick strings. It is the rhythmic anchor of modern bands, working closely with the drums to drive the groove and provide the low-end punch in rock, pop, and funk.
             </p>
 
             <h2>Piano</h2>
+            <img src="img/instruments/piano_icon.png" alt="Piano icon" class="instrument-icon">
             <p>
                 A monumental keyboard instrument that produces sound by striking metal strings with felt-covered hammers. Its vast range—covering over seven octaves—and ability to play both delicate melodies and complex chords simultaneously make it the ultimate tool for composition and a centerpiece of both solo and orchestral music.
             </p>
@@ -321,10 +432,49 @@
                 A powerhouse virtual instrument that defined the sound of early 2010s dubstep and EDM. Its aggressive oscillators and flexible modulation system allow for the creation of gritty, "growling" textures that remain a staple in bass-heavy genres.
             </p>
         </section>
+
+        <section id="sec-login">
+            <h1>LOGIN</h1>
+            <form action="#" method="post" autocomplete="on">
+                <fieldset>
+                    <legend>USER LOGIN</legend>
+
+                    <label for="username">Username</label>
+                    <input id="username" name="username" type="text" placeholder="John Doe" required autocomplete="username">
+
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" placeholder="email@domain.com" required autocomplete="email">
+
+                    <label for="password">Password</label>
+                    <input id="password" name="password" type="password" placeholder="At least 8 characters" required pattern=".{8,}" title="Password must be at least 8 characters" autocomplete="current-password">
+
+                    <label for="remember">Remember me</label>
+                    <input id="remember" name="remember" type="checkbox">
+
+                    <button type="submit">Login</button>
+                </fieldset>
+            </form>
+        </section>
     </main>
 
     <footer>
         <p>© 2025 My Website. All rights reserved.</p>
     </footer>
+
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        if (currentTheme === 'dark') {
+            body.classList.add('dark-mode');
+        }
+
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            const newTheme = body.classList.contains('dark-mode') ? 'dark' : 'light';
+            localStorage.setItem('theme', newTheme);
+        });
+    </script>
 </body>
 </html> 

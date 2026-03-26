@@ -6,7 +6,20 @@
 :root {
     --strings: rgb(102, 179, 131);
     --woods: rgb(111, 190, 221);
-    --gray: rgb(72, 80, 89);
+    --percussions: rgb(240, 232, 128);
+    --synths: rgb(138, 100, 163);
+    --bg-color: #ffffff;
+    --text-color: rgb(72, 80, 89);
+    --header-bg: #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+}
+
+.dark-mode {
+    --bg-color: #363636;
+    --text-color: #e0e0e0;
+    --header-bg: #2a2a2a;
 }
 
 html {
@@ -17,6 +30,8 @@ body {
     font-family: monospace;
     padding: 0;
     margin: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
 }
 
 section {   
@@ -25,12 +40,15 @@ section {
     padding: 48px;
 }
 
-nav {
-    background-color: white;
+header {
+    background-color: var(--header-bg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     position: fixed;
     top: 0;
     width: 100%;
-    box-shadow: 0 0 8px var(--gray);
+    box-shadow: 0 0 8px black;
     z-index: 10;
 }
 
@@ -51,7 +69,7 @@ nav ul li{
 nav ul li a {
     font-size: 1.5em;
     text-decoration: none;
-    color: var(--gray);
+    color: var(--text-color);
 }
 
 nav ul li a:hover {
@@ -59,7 +77,7 @@ nav ul li a:hover {
 }
 
 h1 {
-    color: var(--gray);
+    color: var(--text-color);
     text-align: center;
     font-family: bigNoodleTitling;
     font-size: 800%;
@@ -68,22 +86,22 @@ h1 {
 }
 
 h2 {
-    color: var(--gray);
+    color: var(--text-color);
     font-size: 3em;
     margin-top: 2em;
     margin-bottom: 0.6em;
 }
 
 p {
-    color: var(--gray);
+    color: var(--text-color);
     font-size: 1.2em;
 }
 
 table {
     margin-top: 6em;
     width: 100%;
-    border: 1px solid var(--gray);
-    color: var(--gray);
+    border: 1px solid var(--text-color);
+    color: var(--text-color);
     padding: 1em;
 }
 
@@ -115,8 +133,16 @@ table .range-woods {
     background-color: var(--woods);
 }
 
+table .range-percussions {
+    background-color: var(--percussions);
+}
+
+table .range-synths {
+    background-color: var(--synths);
+}
+
 table .h-line {
-    border-bottom: 1px solid var(--gray);
+    border-bottom: 1px solid var(--text-color);
     height: 3px;
 }
 
@@ -128,7 +154,7 @@ table .gap {
     list-style: none;
     font-weight: 700;
     margin-top: 1.2em;
-    color: var(--gray);
+    color: var(--text-color);
     font-size: 1.2em;
     margin-bottom: 0.5em;
     padding-left: 0;
@@ -147,12 +173,118 @@ table .gap {
     margin-top: 0.2em;
 }
 
+.instrument-icon {
+    width: 20em;
+    height: 20em;
+    margin-right: 12px;
+    vertical-align: middle;
+    opacity: 0.7;
+}
+
 #sec-home h1{
    font-size: 1600%; 
 }
 
+#theme-toggle {
+    margin-right: 2em;
+    width: 3em;
+    height: 3em;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0;
+}
+
+#theme-toggle svg {
+    fill: var(--bg-color);
+}
+
+#theme-toggle svg:last-child {
+    display: none;
+}
+
+.dark-mode #theme-toggle svg:first-child {
+    display: none;
+}
+.dark-mode #theme-toggle svg:last-child {
+    display: block;
+}
+
+form {
+    max-width: 480px;
+    margin: 2rem auto;
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid var(--text-color);
+    padding: 1.5rem;
+    border-radius: 12px;
+}
+
+fieldset {
+    border: 1px solid var(--text-color);
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 0;
+}
+
+legend {
+    font-weight: 700;
+    color: var(--text-color);
+    padding: 0 0.5rem;
+}
+
+label {
+    display: block;
+    margin-top: 0.8rem;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 90%;
+    padding: 0.6rem;
+    margin-top: 0.2rem;
+    border: 1px solid var(--text-color);
+    border-radius: 6px;
+    background: #fff;
+    color: #000;
+    font-size: 1rem;
+}
+
+input[type="checkbox"] {
+    margin-left: 0;
+    margin-top: 0.4rem;
+}
+
+/* button {
+    margin-top: 1rem;
+    padding: 0.75rem 1.2rem;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--woods);
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.9;
+} */
+
+input:focus-visible,
+button:focus-visible,
+a:focus-visible {
+    outline: 3px solid #ff8c00;
+    outline-offset: 2px;
+}
+
 footer {
-    background-color: var(--gray);
+    background-color: var(--text-color);
     text-align: center;
     padding: 16px 0;
 }

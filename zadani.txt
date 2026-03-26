@@ -1,0 +1,108 @@
+Požadavky na projekt
+ÚROVEŇ I – Povinný základ
+(nutné pro získání zápočtu a hodnocení „dobře“, min. 60 bodů)
+
+3.1 Struktura webu
+Zvolte jednu variantu:
+
+Vícestránkový web: minimálně 4 HTML dokumenty, nebo
+Single-page web: jedna HTML stránka se 4 jasně oddělenými tematickými celky, oddělenými pomocí CSS.
+Požadavky:
+
+HTML musí být validní podle HTML5 a well-formed.
+Na konec každého HTML dokumentu vložte odkaz na výsledek HTML validace.
+3.2 CSS
+Použijte jeden externí CSS soubor (CSS3).
+Nepoužívejte preprocesory, postprocesory ani frameworky.
+Na konec stránky vložte odkaz na výsledek validace CSS.
+3.3 Povinné HTML prvky
+Stránky musí obsahovat:
+
+Záhlaví, navigaci, hlavní obsah a zápatí vytvořené pomocí sémantických HTML5 elementů
+Navigační menu vytvořené pomocí seznamu
+Text strukturovaný pomocí odstavců a nadpisů H1–H3
+Číslovaný i nečíslovaný seznam, každý minimálně 7 položek ve dvou úrovních
+Odkazy v textu a odkazy na fragmenty stránky (#id)
+Minimálně 3 obrázky v hlavním obsahu
+Tabulku s caption a záhlavím, využívající spojování buněk horizontálně i vertikálně
+Formulář s minimálně 3 viditelnými prvky, využívající fieldset, legend a label
+3.4 Povinné vlastnosti CSS
+Barevné schéma musí být dostatečně kontrastní a ergonomické.
+
+V CSS nastavte:
+
+Barvu textu a pozadí, font a velikost písma
+Chování odkazů včetně :focus-visible
+Styly nadpisů
+Rozložení stránky pomocí flexboxu nebo CSS Grid
+3.5 Responzivita a média
+Zajistěte:
+
+Flexibilní rozložení obsahu dle šířky viewportu
+Responzivní navigační menu
+Responzivní obrázky:
+přizpůsobení layoutu,
+alespoň jeden obrázek pomocí srcset + sizes nebo <picture>.
+3.6 Moderní standardy
+Projekt musí dále obsahovat:
+
+Vložené SVG
+inline SVG v HTML nebo SVG použité v CSS
+HTML5 formulářové vlastnosti
+využijte alespoň 3 moderní vlastnosti
+(type, required, pattern, autocomplete, placeholder, …)
+Respektování uživatelských preferencí v CSS
+alespoň jedna z možností:
+prefers-reduced-motion
+prefers-color-scheme
+3.7 Přístupnost (WCAG 2.1 AA)
+Projekt musí vyhovovat WCAG 2.1 – Level AA pro desktop i mobilní zařízení.
+Proveďte online audit přístupnosti.
+Na konec každého HTML dokumentu vložte odkaz na výsledek auditu.
+Kontrast barev ověřte pomocí nástrojů typu colourcontrast.cc nebo coolors.co.
+ÚROVEŇ II – Rozšířený povinný základ
+(nutné pro hodnocení „velmi dobře“, bez splnění nelze získat více než cca 75 bodů) Projekt dále obsahuje alespoň jednu z následujících položek:
+
+Alternativní barevné schéma nebo rozložení stránky
+např. light/dark varianta řešená pouze CSS
+barevně a typograficky odlišné schéma (jiná sada fontů, jiné barevné schéma, odlišný layout, ...)
+Pokročilejší CSS techniky, např.:
+generovaný obsah (::before, ::after),
+pokročilejší typografie (clamp(), omezení šířky textu),
+selektory vyšší úrovně.
+Cílem této úrovně je prokázat hlubší porozumění CSS jako systému, nikoli pouze základní stylování.
+
+ÚROVEŇ III – Nepovinné rozšiřující úkoly
+Tyto úkoly nejsou povinné. Slouží ke zlepšení hodnocení nebo k získání bodů navíc.
+Uveďte seznam splněných bonusů a kde se v projektu nachází (URL/sekce).
+
+1) Pokročilá HTML5 média (1–10 bodů)
+audio, video, track (titulky), více zdrojů, figure / figcaption
+přístupnost médií (titulky, textová alternativa)
+2) Pokročilé formuláře (1–10 bodů)
+rozšířená validace bez JS (kombinace pattern, min/max/step, :valid/:invalid)
+promyšlené autocomplete, inputmode, lepší nápověda a chybové hlášky
+více typů vstupů (date, range, color, …) se smysluplným použitím
+3) Alternativní vizuální schéma / layout (1–10 bodů)
+další varianta vzhledu (např. “compact” vs “comfortable”, alternativní typografie)
+přepínání bez JS (např. dvě verze CSS / přepnutí přes odlišné URL / preferované schéma)
+4) Pokročilé CSS techniky (1–10 bodů)
+generovaný obsah, počitadla (counter-*), složitější selektory
+tiskový stylesheet s použitelným výstupem
+výrazně propracované typografické chování (např. fluid typography, lepší rytmus textu)
+5) CSS efekty a pohyb (1–15 bodů)
+transition, transform, animation, @keyframes
+mikrointerakce (např. stav menu, karty, tlačítka), jemná animace bez rušivosti
+respektování prefers-reduced-motion (povinně, pokud animace existují)
+6) Pokročilá responzivita (1–15 bodů)
+širší škála rozlišení a layoutů (více breakpointů nebo fluidní přístup)
+více responzivních médií (srcset/sizes ve větším rozsahu, <picture> s art direction)
+práce s moderními jednotkami (clamp, svh/dvh, min/max, container-friendly přístup)
+7) SVG navíc (1–5 bodů)
+SVG jako funkční součást UI (ikony, schéma, ilustrace) ve větším rozsahu
+stylování SVG přes CSS, případně jednoduché animace SVG (v rámci CSS)
+8) Konfigurace serveru pomocí .htaccess (1–10 bodů)
+chybové stránky, přesměrování, heslo, omezení na IP adresy
+9) Klientský JavaScript (1–10 bodů)
+přepínání CSS, geolokace, rozšířená validace formuláře, drobná interaktivita
+JS musí být přínosný a nesmí nahrazovat povinné HTML/CSS části
