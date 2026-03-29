@@ -38,8 +38,15 @@
    BASE
    ========================================== */
 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
@@ -49,7 +56,7 @@ body {
     margin: 0;
     background-color: var(--bg-color);
     color: var(--text-color);
-    width: 100vw;
+    width: 100%;
 }
 
 section {
@@ -72,7 +79,7 @@ header {
     align-items: center;
     position: fixed;
     top: 0;
-    width: 100vw;
+    width: 100%;
     box-shadow: 0 0 8px black;
     z-index: 10;
 }
@@ -687,6 +694,7 @@ footer {
     background-color: var(--footer-bg);
     text-align: center;
     padding: 24px 0;
+    width: 100%;
 }
 
 footer p {
@@ -713,8 +721,6 @@ footer #html-validation {
     font-size: 0.8em;
     border-radius: 4px;
     box-sizing: border-box;
-    width: 100vw;
-    margin: 0;
 }
 
 /* ==========================================
