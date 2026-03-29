@@ -49,7 +49,7 @@ body {
     margin: 0;
     background-color: var(--bg-color);
     color: var(--text-color);
-    width: 100%;
+    width: 100vw;
 }
 
 section {
@@ -72,7 +72,7 @@ header {
     align-items: center;
     position: fixed;
     top: 0;
-    width: 100%;
+    width: 100vw;
     box-shadow: 0 0 8px black;
     z-index: 10;
 }
@@ -713,7 +713,7 @@ footer #html-validation {
     font-size: 0.8em;
     border-radius: 4px;
     box-sizing: border-box;
-    width: 100%;
+    width: 100vw;
     margin: 0;
 }
 
