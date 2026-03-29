@@ -1,0 +1,46 @@
+SPLNĚNÉ ZADÁNÍ - ÚROVEŇ II A III
+
+ÚROVEŇ II - Rozšířený povinný základ
+
+1) Alternativní barevné schéma
+- Splněno: light/dark varianta pomocí CSS proměnných a třídy .dark-mode.
+- Kde: style.css (:root, .dark-mode), index.html + script.js (#theme-toggle).
+
+2) Pokročilejší CSS techniky
+- Splněno: generovaný obsah (::after), pokročilejší selektory (např. nth-child, atributové selektory), kombinace Flexbox + Grid.
+- Kde: style.css (nav ul li a::after, h2::after, .action-button::after, #menu-toggle[aria-expanded="true"] span:nth-child(...), layout sekcí a karet).
+
+
+ÚROVEŇ III - Nepovinné rozšiřující úkoly
+
+1) Pokročilá HTML5 média
+- Splněno: audio prvky
+- Kde: index.html (ukázky nástrojů).
+
+2) Pokročilé formuláře
+- Splněno: rozšířená validace bez JS (pattern, minlength, min, required, :valid/:invalid), smysluplné autocomplete/inputmode, více typů vstupu (text, email, password, date, range).
+- Kde: index.html (sekce COURSE, formulář), style.css (input:required:valid/invalid, input[type="range"]).
+
+4) Pokročilé CSS techniky
+- Splněno: generovaný obsah a složitější selektory v praktickém použití.
+- Kde: style.css (nav ul li a::after, h2::after, .action-button::after, selektory s nth-child a atributy).
+
+5) CSS efekty a pohyb
+- Splněno: transition + transform + mikrointerakce menu a tlačítek, respektování prefers-reduced-motion.
+- Kde: style.css (#menu-toggle span transition + transform, .action-button::after transition, @media (prefers-reduced-motion: reduce)).
+
+6) Pokročilá responzivita
+- Splněno: více breakpointů (1500px, 980px, 700px), responzivní menu, responzivní média přes srcset/sizes.
+- Kde: style.css (@media bloky), index.html (img se srcset a sizes v tematických sekcích).
+
+7) SVG navíc
+- Splněno: SVG jako funkční součást UI (ikony), stylování SVG v CSS.
+- Kde: index.html (inline SVG v tlačítku #theme-toggle), style.css (.instrument-icon + mask-image na SVG ikonách).
+
+8) Konfigurace serveru pomocí .htaccess
+- Splněno: nastavení 404 fallbacku + zákaz listování adresářů + charset.
+- Kde: .htaccess (ErrorDocument 404, Options -Indexes, AddDefaultCharset UTF-8).
+
+9) Klientský JavaScript
+- Splněno: drobná užitečná interaktivita (hamburger menu, přepínání motivu, smooth scroll CTA, aktualizace hodnoty range).
+- Kde: script.js.
