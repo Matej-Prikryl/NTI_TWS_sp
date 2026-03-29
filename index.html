@@ -3,89 +3,583 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Website</title>
+    <meta name="description" content="Sonos — explore a comprehensive online instrumentarium covering strings, winds, and percussion instruments with audio samples and range tables.">
+    <link rel="stylesheet" href="style.css?v=20260329">
+    <title>Sonos</title>
 </head>
 <body>
     <header>
         <nav>
-            <ul>
-                <li id="nav-sec1"><a href="#section1">SECTION 1</a></li>
-                <li id="nav-sec2"><a href="#section2">SECTION 2</a></li>
-                <li id="nav-sec3"><a href="#section3">SECTION 3</a></li>
-                <li id="nav-sec4"><a href="#section4">SECTION 4</a></li>
+            <button id="menu-toggle" aria-expanded="false" aria-controls="primary-menu" aria-label="Open navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul id="primary-menu">
+                <li><a href="#sec-home">HOME</a></li>
+                <li><a href="#sec-strings">STRINGS</a></li>
+                <li><a href="#sec-winds">WINDS</a></li>
+                <li><a href="#sec-percussions">PERCUSSIONS</a></li>
             </ul>
         </nav>
+        <div>
+            <button id="theme-toggle" aria-label="Toggle light/dark theme">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"/></svg>
+
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M338.5-338.5Q280-397 280-480t58.5-141.5Q397-680 480-680t141.5 58.5Q680-563 680-480t-58.5 141.5Q563-280 480-280t-141.5-58.5ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"/></svg>
+            </button>
+        </div>
     </header>
 
     <main>
-        <section id="section1">
-            <h1>Section 1</h1>
+        <section id="sec-home">
+            <div id="hero">
+                <h1>Sonos</h1>
+                <p>Your online instrumentarium</p>
+                <div id="call-to-action">
+                    <button id="cta-explore" class="action-button" type="button">Explore</button>
+                    <button id="cta-course" class="action-button" type="button">Start Course</button>
+                </div>
+            </div>
+
+            <table id="ranges-table">
+                <caption>Instrument Ranges</caption>
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <th>C0-B0</th>
+                    <th>C1-B1</th>
+                    <th>C2-B2</th>
+                    <th>C3-B3</th>
+                    <th>C4-B4</th>
+                    <th>C5-B5</th>
+                    <th>C6-B6</th>
+                    <th>C7-B7</th>
+                </tr>
+                <!--STRINGS-->
+                <tr>
+                    <td rowspan="7" class="label">strings</td>
+                    <td class="instrument">violin</td>
+                    <td colspan="3"></td>
+                    <td colspan="5" class="range-strings"></td>
+                </tr>
+                <tr>
+                    <td class="instrument">viola</td>
+                    <td colspan="3"></td>
+                    <td colspan="5" class="range-strings"></td>
+                </tr>
+                <tr>
+                    <td class="instrument">violoncello</td>
+                    <td colspan="2"></td>
+                    <td colspan="5" class="range-strings"></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="instrument">bass</td>
+                    <td></td>
+                    <td colspan="4" class="range-strings"></td>
+                    <td colspan="3"></td>
+                </tr>
+                <tr>
+                    <td class="instrument">guitar</td>
+                    <td colspan="2"></td>
+                    <td colspan="5" class="range-strings"></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="instrument">bassguitar</td>
+                    <td></td>
+                    <td colspan="4" class="range-strings"></td>
+                    <td colspan="3"></td>
+                </tr>
+                <tr>
+                    <td class="instrument">piano</td>
+                    <td colspan="8" class="range-strings"></td>
+                </tr>
+                <tr><td colspan="10" class="h-line"></td></tr>
+                <tr><td colspan="10" class="gap"></td></tr>
+                <!--WINDS-->
+                <tr>
+                    <td rowspan="7" class="label">winds</td>
+                    <td class="instrument">piccolo</td>
+                    <td colspan="5"></td>
+                    <td colspan="3" class="range-woods"></td>
+                </tr>
+                <tr>
+                    <td class="instrument">flute</td>
+                    <td colspan="4"></td>
+                    <td colspan="4" class="range-woods"></td>
+                </tr>
+                <tr>
+                    <td class="instrument">clarinet</td>
+                    <td colspan="3"></td>
+                    <td colspan="4" class="range-woods"></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="instrument">bassoon</td>
+                    <td></td>
+                    <td colspan="5" class="range-woods"></td>
+                    <td colspan="2"></td>
+                </tr>
+                <tr>
+                    <td class="instrument">trumpet</td>
+                    <td colspan="3"></td>
+                    <td colspan="4" class="range-woods"></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="instrument">trombone</td>
+                    <td colspan="2"></td>
+                    <td colspan="4" class="range-woods"></td>
+                    <td colspan="2"></td>
+                </tr>
+                <tr>
+                    <td class="instrument">tuba</td>
+                    <td></td>
+                    <td colspan="4" class="range-woods"></td>
+                    <td colspan="3"></td>
+                </tr>
+                <tr><td colspan="10" class="h-line"></td></tr>
+                <tr><td colspan="10" class="gap"></td></tr>
+                <!--PERCUSSIONS-->
+                <tr>
+                    <td rowspan="3" class="label">perc.</td>
+                    <td class="instrument">timpani</td>
+                    <td colspan="2"></td>
+                    <td colspan="2" class="range-percussions"></td>
+                    <td colspan="4"></td>
+                </tr>
+                <tr>
+                    <td class="instrument">xylophone</td>
+                    <td colspan="4"></td>
+                    <td colspan="4" class="range-percussions"></td>
+                </tr>
+                <tr>
+                    <td class="instrument">marimba</td>
+                    <td colspan="2"></td>
+                    <td colspan="6" class="range-percussions"></td>
+                </tr>
+            </table>
+
+            <h2>7 Steps to Start Your Music Journey</h2>
+            <ol>
+                <li>Discover your musical interests (classical, rock, jazz, etc.)</li>
+                <li>Consider your budget for instruments and lessons</li>
+                <li>Choose an instrument category
+                    <ol>
+                        <li>Strings (violin, guitar)</li>
+                        <li>Winds (flute, trumpet)</li>
+                        <li>Percussion (drums, xylophone)</li>
+                    </ol>
+                </li>
+                <li>Try out several instruments in person</li>
+                <li>Think about physical requirements (size, strength)</li>
+                <li>Find a qualified teacher</li>
+                <li>Begin with regular practice</li>
+            </ol>
+        </section>
+        <section id="sec-strings">
+            <h2>Strings</h2>
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus tempore modi, quas optio dignissimos facere facilis ipsam assumenda ex, et magni, sit consequuntur minus quis impedit nobis maiores. Excepturi, voluptas.
-                Tenetur, est. Eligendi veritatis quos hic voluptates suscipit quidem vitae sunt quae architecto eum facilis consectetur obcaecati vero minus cum, atque inventore ipsam et laborum! Consectetur iste libero deleniti delectus.
-                Tenetur repellendus inventore, vero voluptas impedit iste molestias expedita tempora. Ab possimus quasi in aperiam tempore molestias accusamus earum ducimus minima? Dolore ratione maxime suscipit reiciendis itaque eum placeat natus.
+                Strings, or chordophones, represent a diverse family of instruments that produce sound through the vibration of stretched strings. Whether played with a horsehair bow like the violin and cello, plucked by hand like the harp and guitar, or struck by hammers as seen in the piano, these instruments are known for their expressive range and lyrical qualities. They form the emotional backbone of the classical orchestra and are equally essential in modern folk, rock, and jazz, offering everything from soaring melodic lines to rich, rhythmic harmonies.
             </p>
 
-            <h2>Headline #2</h2>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus tempore modi, quas optio dignissimos facere facilis ipsam assumenda ex, et magni, sit consequuntur minus quis impedit nobis maiores. Excepturi, voluptas.
-                Tenetur, est. Eligendi veritatis quos hic voluptates suscipit quidem vitae sunt quae architecto eum facilis consectetur obcaecati vero minus cum, atque inventore ipsam et laborum! Consectetur iste libero deleniti delectus.
-                Tenetur repellendus inventore, vero voluptas impedit iste molestias expedita tempora. Ab possimus quasi in aperiam tempore molestias accusamus earum ducimus minima? Dolore ratione maxime suscipit reiciendis itaque eum placeat natus.
-            </p>
+            <img class="section-image" src="img/strings_1600.jpg" srcset="img/strings_800.jpg 800w, img/strings_1600.jpg 1600w, img/strings_3200.jpg 3200w" sizes="(max-width: 700px) 90vw, 68rem" width="1600" height="900" alt="String instruments displayed together" loading="lazy">
+
+            <h3>List of String Instruments</h3>
+
+            <ul class="instrument-list">
+                <li>bowed strings
+                    <ul>
+                        <li><a href="#violin">violin</a></li>
+                        <li><a href="#viola">viola</a></li>
+                        <li><a href="#violoncello">violoncello</a></li>
+                        <li><a href="#bass">bass</a></li>
+                    </ul>
+                </li>
+                <li>plucked strings
+                    <ul>
+                        <li><a href="#guitar">guitar</a></li>
+                        <li><a href="#bassguitar">bassguitar</a></li>
+                    </ul>
+                </li>
+                <li>struck strings
+                    <ul>
+                        <li><a href="#piano">piano</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <div class="instrument-group">
+                <div class="instrument-container" id="violin">
+                    <span class="instrument-icon violin-icon" role="img" aria-label="Violin icon"></span>
+                    <div class="instrument-text">
+                        <h3>Violin</h3>
+                        <p>
+                            The smallest and highest-pitched member of the string family, the violin is celebrated for its bright, singing tone. It is a versatile lead instrument, essential in both classical orchestras and various folk traditions worldwide.
+                        </p>
+                    </div>
+                    <audio controls class="instrument-audio" aria-label="Violin audio sample">
+                        <source src="audio/violin.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+
+                <div class="instrument-container" id="viola">
+                    <span class="instrument-icon viola-icon" role="img" aria-label="Viola icon"></span>
+                    <div class="instrument-text">
+                        <h3>Viola</h3>
+                        <p>
+                            Often mistaken for the violin, the viola is slightly larger and produces a deeper, mellower sound. It provides a rich harmonic middle voice in string ensembles, bridging the gap between the high violins and the lower cellos.
+                        </p>
+                    </div>
+                    <audio controls class="instrument-audio" aria-label="Viola audio sample">
+                        <source src="audio/viola.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+
+                <div class="instrument-container" id="violoncello">
+                    <span class="instrument-icon cello-icon" role="img" aria-label="Violoncello icon"></span>
+                    <div class="instrument-text">
+                        <h3>Violoncello</h3>
+                        <p>
+                            Commonly known as the cello, this instrument is played seated and is beloved for its deep, soulful resonance that closely mimics the range of the human voice. It serves as both a powerful melodic soloist and a foundational bass element.
+                        </p>
+                    </div>
+                    <audio controls class="instrument-audio" aria-label="Violoncello audio sample">
+                        <source src="audio/cello.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+
+                <div class="instrument-container" id="bass">
+                    <span class="instrument-icon bass-icon" role="img" aria-label="Bass icon"></span>
+                    <div class="instrument-text">
+                        <h3>Bass</h3>
+                        <p>
+                            Also called the double bass or upright bass, it is the largest and lowest-pitched bowed string instrument. Its massive body creates the deep, thumping vibrations that provide the rhythmic and harmonic floor for orchestras and jazz bands alike.
+                        </p>
+                    </div>
+                    <audio controls class="instrument-audio" aria-label="Bass audio sample">
+                        <source src="audio/bass.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+
+                <div class="instrument-container" id="guitar">
+                    <span class="instrument-icon guitar-icon" role="img" aria-label="Guitar icon"></span>
+                    <div class="instrument-text">
+                        <h3>Guitar</h3>
+                        <p>
+                            A popular fretted instrument that can be acoustic or electric, the guitar produces sound by plucking or strumming six strings. Its portability and wide range of styles—from classical to heavy metal—make it one of the most iconic instruments in modern music.
+                        </p>
+                    </div>
+                    <audio controls class="instrument-audio" aria-label="Guitar audio sample">
+                        <source src="audio/guitar.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+
+                <div class="instrument-container" id="bassguitar">
+                    <span class="instrument-icon bassguitar-icon" role="img" aria-label="Bass guitar icon"></span>
+                    <div class="instrument-text">
+                        <h3>Bassguitar</h3>
+                        <p>
+                            Unlike the upright bass, the bass guitar is held horizontally and usually features four thick strings. It is the rhythmic anchor of modern bands, working closely with the drums to drive the groove and provide the low-end punch in rock, pop, and funk.
+                        </p>
+                    </div>
+                    <audio controls class="instrument-audio" aria-label="Bass guitar audio sample">
+                        <source src="audio/bassguitar.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+
+                <div class="instrument-container" id="piano">
+                    <span class="instrument-icon piano-icon" role="img" aria-label="Piano icon"></span>
+                    <div class="instrument-text">
+                        <h3>Piano</h3>
+                        <p>
+                            A monumental keyboard instrument that produces sound by striking metal strings with felt-covered hammers. Its vast range—covering over seven octaves—and ability to play both delicate melodies and complex chords simultaneously make it the ultimate tool for composition and a centerpiece of both solo and orchestral music.
+                        </p>
+                    </div>
+                    <audio controls class="instrument-audio" aria-label="Piano audio sample">
+                        <source src="audio/piano.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+            </div>
         </section>
 
-        <section id="section2">
-            <h1>Section 2</h1>
+        <section id="sec-winds">
+            <h2>Winds</h2>
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus tempore modi, quas optio dignissimos facere facilis ipsam assumenda ex, et magni, sit consequuntur minus quis impedit nobis maiores. Excepturi, voluptas.
-                Tenetur, est. Eligendi veritatis quos hic voluptates suscipit quidem vitae sunt quae architecto eum facilis consectetur obcaecati vero minus cum, atque inventore ipsam et laborum! Consectetur iste libero deleniti delectus.
-                Tenetur repellendus inventore, vero voluptas impedit iste molestias expedita tempora. Ab possimus quasi in aperiam tempore molestias accusamus earum ducimus minima? Dolore ratione maxime suscipit reiciendis itaque eum placeat natus.
+                Winds, scientifically known as aerophones, generate sound by vibrating a column of air within a resonator. This broad category is traditionally divided into woodwinds, which often use a wooden reed or a shaped edge to split the air (like flutes, clarinets, and saxophones), and brass instruments, where the player’s lips vibrate against a metal mouthpiece (such as trumpets and trombones). Winds are celebrated for their breath-like phrasing and can produce a massive spectrum of textures, from the delicate, airy trills of a piccolo to the powerful, triumphant roar of a tuba.
             </p>
 
-            <h2>Headline #2</h2>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus tempore modi, quas optio dignissimos facere facilis ipsam assumenda ex, et magni, sit consequuntur minus quis impedit nobis maiores. Excepturi, voluptas.
-                Tenetur, est. Eligendi veritatis quos hic voluptates suscipit quidem vitae sunt quae architecto eum facilis consectetur obcaecati vero minus cum, atque inventore ipsam et laborum! Consectetur iste libero deleniti delectus.
-                Tenetur repellendus inventore, vero voluptas impedit iste molestias expedita tempora. Ab possimus quasi in aperiam tempore molestias accusamus earum ducimus minima? Dolore ratione maxime suscipit reiciendis itaque eum placeat natus.
-            </p>
+            <img class="section-image" src="img/winds_1600.jpg" srcset="img/winds_800.jpg 800w, img/winds_1600.jpg 1600w" sizes="(max-width: 700px) 90vw, 68rem" width="1600" height="900" alt="Wind instruments grouped by family" loading="lazy">
+
+            <h3>List of Wind Instruments</h3>
+
+            <ul class="instrument-list">
+                <li>woodwinds
+                    <ul>
+                        <li><a href="#piccolo">piccolo</a></li>
+                        <li><a href="#flute">flute</a></li>
+                        <li><a href="#clarinet">clarinet</a></li>
+                        <li><a href="#bassoon">bassoon</a></li>
+                    </ul>
+                </li>
+                <li>brass
+                    <ul>
+                        <li><a href="#trumpet">trumpet</a></li>
+                        <li><a href="#trombone">trombone</a></li>
+                        <li><a href="#tuba">tuba</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <div class="instrument-group">
+                <div class="instrument-container" id="piccolo">
+                    <span class="instrument-icon piccolo-icon" role="img" aria-label="Piccolo icon"></span>
+                    <div class="instrument-text">
+                        <h3>Piccolo</h3>
+                        <p>
+                            The highest-pitched member of the wind family, the piccolo is a half-sized flute. Its piercing, brilliant sound can be heard even over a full orchestra, often used to add sparkle to marches and triumphant melodies.
+                        </p>
+                    </div>
+                    <audio controls class="instrument-audio" aria-label="Piccolo audio sample">
+                        <source src="audio/piccolo.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+
+                <div class="instrument-container" id="flute">
+                    <span class="instrument-icon flute-icon" role="img" aria-label="Flute icon"></span>
+                    <div class="instrument-text">
+                        <h3>Flute</h3>
+                        <p>
+                            A reedless instrument that produces a silvery, airy tone by blowing air across an opening. Known for its incredible agility, it is often used for fast, bird-like trills and elegant solo passages.
+                        </p>
+                    </div>
+                    <audio controls class="instrument-audio" aria-label="Flute audio sample">
+                        <source src="audio/flute.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+
+                <div class="instrument-container" id="clarinet">
+                    <span class="instrument-icon clarinet-icon" role="img" aria-label="Clarinet icon"></span>
+                    <div class="instrument-text">
+                        <h3>Clarinet</h3>
+                        <p>
+                            This versatile single-reed instrument is famous for its wide dynamic range and rich, woody timbre. It can shift effortlessly from dark, mellow low notes to bright, singing high tones.
+                        </p>
+                    </div>
+                    <audio controls class="instrument-audio" aria-label="Clarinet audio sample">
+                        <source src="audio/clarinet.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+
+                <div class="instrument-container" id="bassoon">
+                    <span class="instrument-icon bassoon-icon" role="img" aria-label="Bassoon icon"></span>
+                    <div class="instrument-text">
+                        <h3>Bassoon</h3>
+                        <p>
+                            The "clown of the orchestra" is a large double-reed instrument with a distinctive, deep buzzing sound. It provides both a sturdy bass foundation and a unique, often humorous, melodic character.
+                        </p>
+                    </div>
+                    <audio controls class="instrument-audio" aria-label="Bassoon audio sample">
+                        <source src="audio/bassoon.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+
+                <div class="instrument-container" id="trumpet">
+                    <span class="instrument-icon trumpet-icon" role="img" aria-label="Trumpet icon"></span>
+                    <div class="instrument-text">
+                        <h3>Trumpet</h3>
+                        <p>
+                            The leader of the brass section, the trumpet has a powerful, metallic sound that commands attention. It is a staple in everything from classical fanfares to energetic jazz solos.
+                        </p>
+                    </div>
+                    <audio controls class="instrument-audio" aria-label="Trumpet audio sample">
+                        <source src="audio/trumpet.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+
+                <div class="instrument-container" id="trombone">
+                    <span class="instrument-icon trombone-icon" role="img" aria-label="Trombone icon"></span>
+                    <div class="instrument-text">
+                        <h3>Trombone</h3>
+                        <p>
+                            Unique for its telescoping slide, the trombone allows the player to glide smoothly between notes. It produces a bold, heroic sound that can range from a soft velvet texture to a thunderous roar.
+                        </p>
+                    </div>
+                    <audio controls class="instrument-audio" aria-label="Trombone audio sample">
+                        <source src="audio/trombone.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+
+                <div class="instrument-container" id="tuba">
+                    <span class="instrument-icon tuba-icon" role="img" aria-label="Tuba icon"></span>
+                    <div class="instrument-text">
+                        <h3>Tuba</h3>
+                        <p>
+                            The largest and lowest-pitched brass instrument, the tuba serves as the anchor of the entire band. It provides a deep, resonant floor of sound that supports the harmony of the whole ensemble.
+                        </p>
+                    </div>
+                    <audio controls class="instrument-audio" aria-label="Tuba audio sample">
+                        <source src="audio/tuba.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+            </div>
         </section>
 
-        <section id="section3">
-            <h1>Section 3</h1>
+        <section id="sec-percussions">
+            <h2>Percussions</h2>
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus tempore modi, quas optio dignissimos facere facilis ipsam assumenda ex, et magni, sit consequuntur minus quis impedit nobis maiores. Excepturi, voluptas.
-                Tenetur, est. Eligendi veritatis quos hic voluptates suscipit quidem vitae sunt quae architecto eum facilis consectetur obcaecati vero minus cum, atque inventore ipsam et laborum! Consectetur iste libero deleniti delectus.
-                Tenetur repellendus inventore, vero voluptas impedit iste molestias expedita tempora. Ab possimus quasi in aperiam tempore molestias accusamus earum ducimus minima? Dolore ratione maxime suscipit reiciendis itaque eum placeat natus.
+                Percussions comprise the world's oldest and most varied instrument family, encompassing anything that is struck, shaken, or scraped to create sound. This group includes membranophones like drums, where a stretched skin vibrates, and idiophones like xylophones or cymbals, where the entire body of the instrument resonates. Beyond simply keeping the beat, percussion instruments provide the "heartbeat" and color of a musical piece, ranging from the subtle shimmer of a triangle to the earth-shaking resonance of a timpani or a modern drum kit.
             </p>
 
-            <h2>Headline #2</h2>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus tempore modi, quas optio dignissimos facere facilis ipsam assumenda ex, et magni, sit consequuntur minus quis impedit nobis maiores. Excepturi, voluptas.
-                Tenetur, est. Eligendi veritatis quos hic voluptates suscipit quidem vitae sunt quae architecto eum facilis consectetur obcaecati vero minus cum, atque inventore ipsam et laborum! Consectetur iste libero deleniti delectus.
-                Tenetur repellendus inventore, vero voluptas impedit iste molestias expedita tempora. Ab possimus quasi in aperiam tempore molestias accusamus earum ducimus minima? Dolore ratione maxime suscipit reiciendis itaque eum placeat natus.
-            </p>
+            <img class="section-image" src="img/percussions_1600.jpg" srcset="img/percussions_800.jpg 800w, img/percussions_1600.jpg 1600w, img/percussions_3200.jpg 3200w" sizes="(max-width: 700px) 90vw, 68rem" width="1600" height="900" alt="Percussion instruments in a studio setup" loading="lazy">
+
+            <h3>List of Percussion Instruments</h3>
+
+            <ul class="instrument-list">
+                <li>tuned
+                    <ul>
+                        <li><a href="#timpani">timpani</a></li>
+                        <li><a href="#xylophone">xylophone</a></li>
+                        <li><a href="#marimba">marimba</a></li>
+                    </ul>
+                </li>
+                <li>untuned
+                    <ul>
+                        <li><a href="#drum-kit">drum kit</a></li>
+                        <li><a href="#bongos">bongos</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <div class="instrument-group">
+                <div class="instrument-container" id="timpani">
+                    <span class="instrument-icon timpani-icon" role="img" aria-label="Timpani icon"></span>
+                    <div class="instrument-text">
+                        <h3>Timpani</h3>
+                        <p>
+                            Also known as kettle drums, these large, tunable copper drums are played with mallets. They provide a powerful, thunderous pulse that reinforces the bass line and adds dramatic tension to orchestral climaxes.
+                        </p>
+                    </div>
+                    <audio controls class="instrument-audio" aria-label="Timpani audio sample">
+                        <source src="audio/timpani.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+
+                <div class="instrument-container" id="xylophone">
+                    <span class="instrument-icon xylophone-icon" role="img" aria-label="Xylophone icon"></span>
+                    <div class="instrument-text">
+                        <h3>Xylophone</h3>
+                        <p>
+                            A melodic percussion instrument consisting of wooden bars struck with hard mallets. It produces a bright, sharp, and "dry" tone that is perfect for fast, rhythmic passages and cutting through a dense musical mix.
+                        </p>
+                    </div>
+                    <audio controls class="instrument-audio" aria-label="Xylophone audio sample">
+                        <source src="audio/xylophone.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+
+                <div class="instrument-container" id="marimba">
+                    <span class="instrument-icon marimba-icon" role="img" aria-label="Marimba icon"></span>
+                    <div class="instrument-text">
+                        <h3>Marimba</h3>
+                        <p>
+                            Similar in appearance to the xylophone but larger and deeper in tone, the marimba features wooden bars and metal resonators. It is known for its warm, mellow, and resonant sound, often used for beautiful solo performances.
+                        </p>
+                    </div>
+                    <audio controls class="instrument-audio" aria-label="Marimba audio sample">
+                        <source src="audio/marimba.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+
+                <div class="instrument-container" id="drum-kit">
+                    <span class="instrument-icon drumkit-icon" role="img" aria-label="Drum kit icon"></span>
+                    <div class="instrument-text">
+                        <h3>Drum Kit</h3>
+                        <p>
+                            A centerpiece of modern music, the drum kit is a collection of drums and cymbals played by a single musician. It combines various textures-from the deep thud of the bass drum to the metallic shimmer of the cymbals-to drive the groove.
+                        </p>
+                    </div>
+                    <audio controls class="instrument-audio" aria-label="Drum kit audio sample">
+                        <source src="audio/drumkit.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+
+                <div class="instrument-container" id="bongos">
+                    <span class="instrument-icon bongos-icon" role="img" aria-label="Bongos icon"></span>
+                    <div class="instrument-text">
+                        <h3>Bongos</h3>
+                        <p>
+                            An iconic pair of small, open-bottomed drums of different sizes. Played primarily with the hands, they produce high-pitched, crisp rhythmic patterns that are essential to Latin and Afro-Cuban music.
+                        </p>
+                    </div>
+                    <audio controls class="instrument-audio" aria-label="Bongos audio sample">
+                        <source src="audio/bongos.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+            </div>
         </section>
 
-        <section id="section4">
-            <h1>Section 4</h1>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus tempore modi, quas optio dignissimos facere facilis ipsam assumenda ex, et magni, sit consequuntur minus quis impedit nobis maiores. Excepturi, voluptas.
-                Tenetur, est. Eligendi veritatis quos hic voluptates suscipit quidem vitae sunt quae architecto eum facilis consectetur obcaecati vero minus cum, atque inventore ipsam et laborum! Consectetur iste libero deleniti delectus.
-                Tenetur repellendus inventore, vero voluptas impedit iste molestias expedita tempora. Ab possimus quasi in aperiam tempore molestias accusamus earum ducimus minima? Dolore ratione maxime suscipit reiciendis itaque eum placeat natus.
-            </p>
+        <section id="sec-course">
+            <h2>COURSE</h2>
+            <form action="#" method="post" autocomplete="on">
+                <fieldset>
+                    <legend>COURSE ENROLLMENT</legend>
 
-            <h2>Headline #2</h2>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus tempore modi, quas optio dignissimos facere facilis ipsam assumenda ex, et magni, sit consequuntur minus quis impedit nobis maiores. Excepturi, voluptas.
-                Tenetur, est. Eligendi veritatis quos hic voluptates suscipit quidem vitae sunt quae architecto eum facilis consectetur obcaecati vero minus cum, atque inventore ipsam et laborum! Consectetur iste libero deleniti delectus.
-                Tenetur repellendus inventore, vero voluptas impedit iste molestias expedita tempora. Ab possimus quasi in aperiam tempore molestias accusamus earum ducimus minima? Dolore ratione maxime suscipit reiciendis itaque eum placeat natus.
-            </p>
+                    <label for="username">Username</label>
+                    <input id="username" name="username" type="text" placeholder="John Doe" required minlength="3" maxlength="30" pattern="[A-Za-z0-9._-]{3,30}" title="Use 3 to 30 characters: letters, numbers, dot, underscore or dash" autocomplete="username">
+
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" placeholder="email@domain.com" required autocomplete="email" inputmode="email">
+
+                    <label for="password">Password</label>
+                    <input id="password" name="password" type="password" placeholder="At least 8 characters" required minlength="8" pattern=".{8,}" title="Password must be at least 8 characters" autocomplete="current-password">
+
+                    <label for="start-date">Preferred Start Date</label>
+                    <input id="start-date" name="start-date" type="date" min="2026-01-01" required>
+
+                    <label for="practice-time">Practice Time per Day (minutes)</label>
+                    <input id="practice-time" name="practice-time" type="range" min="10" max="180" step="5" value="45">
+                    <output id="practice-time-value" for="practice-time">45 min</output>
+
+                    <div id="button-holder"><button class="action-button" type="submit">Start Course</button></div>
+                </fieldset>
+            </form>
         </section>
     </main>
 
     <footer>
-        <p>© 2025 My Website. All rights reserved.</p>
+        <a target="_blank" rel="noopener noreferrer" href="https://achecks.org/achecker#wcag21aa-desktop,https://stuwrk.nti.tul.cz/~matej.prikryl/sp/"><img src="https://achecks.org/images/icon_W21_aa.png" alt="AChecker accessibility checker: WCAG 2.1 (Level AA)" height="32" width="88" /></a>
+        <a target="_blank" rel="noopener noreferrer" href="https://achecks.org/achecker#wcag21aa-mobile,https://stuwrk.nti.tul.cz/~matej.prikryl/sp/"><img src="https://achecks.org/images/icon_W21_aa.png" alt="AChecker accessibility checker: WCAG 2.1 (Level AA)" height="32" width="88" /></a>
+        <a href="https://jigsaw.w3.org/css-validator/check/referer">
+            <img style="border:0;width:88px;height:31px"
+            src="https://jigsaw.w3.org/css-validator/images/vcss-blue"
+            alt="Ověřit CSS!" />
+        </a>
+        <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fstuwrk.nti.tul.cz%2F%7Ematej.prikryl%2Fsp%2F"><div id="html-validation">HTML Validation</div></a>
+        <p>© 2026 Matěj Přikryl. All rights reserved.</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html> 

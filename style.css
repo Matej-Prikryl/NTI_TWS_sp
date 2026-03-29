@@ -1,39 +1,123 @@
+/* ==========================================
+   FONTS
+   ========================================== */
+
 @font-face {
     font-family: bigNoodleTitling;
     src: url("fonts/big_noodle_titling.ttf");
 }
 
+/* ==========================================
+   VARIABLES & THEME
+   ========================================== */
+
 :root {
-    --tan: rgb(250, 222, 160);
-    --rust: rgb(158, 84, 23);
-    --mint: rgb(40, 150, 108);
-    --blue: rgb(40, 106, 150);
-    --purple: rgb(129, 61, 115);
-    --gray: rgb(61, 69, 78);
+    --accent-color: rgb(231, 106, 74);
+    --bg-color: #ffffff;
+    --text-color: rgb(72, 80, 89);
+    --header-bg: #ffffff;
+    --footer-bg: rgb(72, 80, 89);
+    --footer-text: #ffffff;
+    --strings: rgb(129, 211, 129);
+    --winds: rgb(111, 190, 221);
+    --percussions: rgb(240, 232, 128);
+}
+
+.dark-mode {
+    --bg-color: #363636;
+    --text-color: #e0e0e0;
+    --header-bg: #2a2a2a;
+    --strings: rgb(80, 128, 80);
+    --winds: rgb(100, 154, 175);
+    --percussions: rgb(158, 151, 55);
+    --footer-bg: #2a2a2a;
+    --footer-text: #e0e0e0;
+}
+
+/* ==========================================
+   BASE
+   ========================================== */
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
     font-family: monospace;
+    font-size: 1.2em;
     padding: 0;
     margin: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
 }
 
-section {   
-    min-height: 100vh; 
-    margin: 0;
+section {
+    min-height: 100vh;
+    margin: 0 auto;
     padding: 48px;
+    display: flex;
+    flex-direction: column;
+    width: min(90vw, 80rem);
 }
 
-nav {
-    background-color: var(--tan);
+/* ==========================================
+   HEADER & NAVIGATION
+   ========================================== */
+
+header {
+    background-color: var(--header-bg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     position: fixed;
     top: 0;
     width: 100%;
+    box-shadow: 0 0 8px black;
+    z-index: 10;
+}
+
+nav {
+    flex: 0 1 auto;
+}
+
+#menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.35rem;
+    width: 3rem;
+    height: 3rem;
+    margin-left: 1.5rem;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+#menu-toggle span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: var(--text-color);
+    border-radius: 999px;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+#menu-toggle[aria-expanded="true"] span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+#menu-toggle[aria-expanded="true"] span:nth-child(2) {
+    opacity: 0;
+}
+
+#menu-toggle[aria-expanded="true"] span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
 }
 
 nav ul {
     list-style-type: none;
-    margin: 0;
+    margin: 0 2em 0 0;
     padding: 0;
     display: flex;
     justify-content: center;
@@ -42,39 +126,46 @@ nav ul {
 
 nav ul li{
     height: 100%;
-    width: 25%;
-    padding: 16px;;
-}
-
-#nav-sec1 {
-    background-color: var(--rust);
-}
-
-#nav-sec2 {
-    background-color: var(--mint);
-}
-
-#nav-sec3 {
-    background-color: var(--blue);
-}
-
-#nav-sec4 {
-    background-color: var(--purple);
+    padding: 24px;
 }
 
 nav ul li a {
     font-size: 1.5em;
     text-decoration: none;
-    color: var(--tan);
+    color: var(--text-color);
 }
 
 nav ul li a:hover {
-    cursor: pointer;
     font-weight: 700;
 }
 
+nav ul li a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: var(--text-color);
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* ==========================================
+   TYPOGRAPHY
+   ========================================== */
+
 h1 {
-    color: var(--tan);
+    font-family: bigNoodleTitling, monospace;
+    font-size: 1600%;
+    margin: 0;
+}
+
+h2 {
+    position: relative;
+    align-self: center;
+    display: inline-block;
     text-align: center;
     font-family: bigNoodleTitling;
     font-size: 800%;
@@ -82,40 +173,653 @@ h1 {
     margin-bottom: 0;
 }
 
-h2 {
-    color: var(--tan);
+h2::after {
+    content: "";
+    display: block;
+    width: 110%;
+    height: 35%;
+    background-color: var(--text-color);
+    position: absolute;
+    left: -5%;
+    bottom: 8px;
+    z-index: -1;
+}
+
+h3 {
     font-size: 3em;
     margin-top: 2em;
     margin-bottom: 0.6em;
 }
 
 p {
-    color: var(--tan);
     font-size: 1.2em;
 }
 
-footer {
-    background-color: var(--gray);
+#ranges-table {
+    margin: 2em auto;
+    scroll-margin-top: 10em;
+    width: min(90vw, 80rem);
+    border: 1px solid var(--text-color);
+    color: var(--text-color);
+    padding: 1em;
+}
+
+#ranges-table td {
     text-align: center;
-    padding: 16px 0;
 }
 
-#section1 {
-    background-color: var(--rust);
+#ranges-table caption {
+    caption-side: bottom;
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-top: 0.5em;
 }
 
-#section1 h1 {
-    word-spacing: 0.13em;
+#ranges-table .label {
+    font-size: 1.2em;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    transform: rotate(-90deg);
+    width: 0;
+    z-index: 0;
 }
 
-#section2 {
-    background-color: var(--mint);
+#ranges-table .instrument {
+    text-align: right;
+    width: 0;
+    padding-right: 1em;
 }
 
-#section3 {
-    background-color: var(--blue);
+#ranges-table .range-strings {
+    background-color: var(--strings);
 }
 
-#section4 {
-    background-color: var(--purple);
+#ranges-table .range-woods {
+    background-color: var(--winds);
 }
+
+#ranges-table .range-percussions {
+    background-color: var(--percussions);
+}
+
+#ranges-table .h-line {
+    border-bottom: 1px solid var(--text-color);
+    height: 3px;
+}
+
+#ranges-table .gap {
+    height: 2px;
+}
+
+/* ==========================================
+   HOME SECTION
+   ========================================== */
+
+ol {
+    margin: 1.2em 0;
+    font-size: 1.2em;
+}
+
+ol ol {
+    font-size: 1em;
+}
+
+/* ==========================================
+   INSTRUMENTS
+   ========================================== */
+
+.instrument-list {
+    list-style: none;
+    font-weight: 700;
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+    margin-left: 4em;
+    padding-left: 0;
+}
+
+.instrument-list li {
+    margin-top: 1em;
+}
+
+.instrument-list ul {
+    font-weight: 400;
+    list-style: disc;
+}
+
+.instrument-list ul li {
+    margin-top: 0.2em;
+}
+
+.instrument-list ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.instrument-list ul li a:hover {
+    text-decoration: underline;
+}
+
+.section-image {
+    display: block;
+    width: min(90vw, 68rem);
+    max-width: 100%;
+    height: auto;
+    margin: 1.5rem auto 1rem;
+    border-radius: 1rem;
+}
+
+.instrument-group {
+    padding: 0 2rem;
+    margin-top: 12rem;
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+}
+
+.instrument-container {
+    scroll-margin-top: 10em;
+    width: 50%;
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    grid-template-areas:
+        "icon text"
+        "icon audio";
+    align-items: start;
+    column-gap: 2rem;
+    row-gap: 1rem;
+    margin-top: 4rem;
+}
+
+.instrument-group .instrument-container:nth-child(odd) {
+    align-self: flex-start;
+}
+
+.instrument-group .instrument-container:nth-child(even) {
+    align-self: flex-end;
+}
+
+.instrument-icon {
+    display: inline-block;
+    background-color: var(--text-color);
+    width: 20em;
+    height: 20em;
+    grid-area: icon;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+}
+
+.instrument-text {
+    grid-area: text;
+}
+
+.instrument-text h3 {
+    margin-top: 0;
+}
+
+.instrument-container p {
+    margin: 0;
+}
+
+.violin-icon {
+    -webkit-mask-image: url("img/instruments/violin_icon.svg");
+    mask-image: url("img/instruments/violin_icon.svg");
+}
+
+.viola-icon {
+    -webkit-mask-image: url("img/instruments/viola_icon.svg");
+    mask-image: url("img/instruments/viola_icon.svg");
+}
+
+.cello-icon {
+    -webkit-mask-image: url("img/instruments/cello_icon.svg");
+    mask-image: url("img/instruments/cello_icon.svg");
+}
+
+.bass-icon {
+    -webkit-mask-image: url("img/instruments/bass_icon.svg");
+    mask-image: url("img/instruments/bass_icon.svg");
+}
+
+.guitar-icon {
+    -webkit-mask-image: url("img/instruments/guitar_icon.svg");
+    mask-image: url("img/instruments/guitar_icon.svg");
+}
+
+.bassguitar-icon {
+    -webkit-mask-image: url("img/instruments/bassguitar_icon.svg");
+    mask-image: url("img/instruments/bassguitar_icon.svg");
+}
+
+.piano-icon {
+    -webkit-mask-image: url("img/instruments/piano_icon.svg");
+    mask-image: url("img/instruments/piano_icon.svg");
+}
+
+.piccolo-icon {
+    -webkit-mask-image: url("img/instruments/piccolo_icon.svg");
+    mask-image: url("img/instruments/piccolo_icon.svg");
+}
+
+.flute-icon {
+    -webkit-mask-image: url("img/instruments/flute_icon.svg");
+    mask-image: url("img/instruments/flute_icon.svg");
+}
+
+.clarinet-icon {
+    -webkit-mask-image: url("img/instruments/clarinet_icon.svg");
+    mask-image: url("img/instruments/clarinet_icon.svg");
+}
+
+.bassoon-icon {
+    -webkit-mask-image: url("img/instruments/bassoon_icon.svg");
+    mask-image: url("img/instruments/bassoon_icon.svg");
+}
+
+.trumpet-icon {
+    -webkit-mask-image: url("img/instruments/trumpet_icon.svg");
+    mask-image: url("img/instruments/trumpet_icon.svg");
+}
+
+.trombone-icon {
+    -webkit-mask-image: url("img/instruments/trombone_icon.svg");
+    mask-image: url("img/instruments/trombone_icon.svg");
+}
+
+.tuba-icon {
+    -webkit-mask-image: url("img/instruments/tuba_icon.svg");
+    mask-image: url("img/instruments/tuba_icon.svg");
+}
+
+.timpani-icon {
+    -webkit-mask-image: url("img/instruments/timpani_icon.svg");
+    mask-image: url("img/instruments/timpani_icon.svg");
+}
+
+.xylophone-icon {
+    -webkit-mask-image: url("img/instruments/xylophone_icon.svg");
+    mask-image: url("img/instruments/xylophone_icon.svg");
+}
+
+.marimba-icon {
+    -webkit-mask-image: url("img/instruments/marimba_icon.svg");
+    mask-image: url("img/instruments/marimba_icon.svg");
+}
+
+.drumkit-icon {
+    -webkit-mask-image: url("img/instruments/drumkit_icon.svg");
+    mask-image: url("img/instruments/drumkit_icon.svg");
+}
+
+.bongos-icon {
+    -webkit-mask-image: url("img/instruments/bongos_icon.svg");
+    mask-image: url("img/instruments/bongos_icon.svg");
+}
+
+.instrument-audio {
+    grid-area: audio;
+    width: 20em;
+    max-width: 100%;
+}
+
+.instrument-audio-wrap {
+    grid-area: audio;
+    margin: 0;
+}
+
+.instrument-audio-wrap figcaption {
+    margin-bottom: 0.45rem;
+    font-size: 0.85em;
+}
+
+/* ==========================================
+   HERO & CALL TO ACTION
+   ========================================== */
+
+#hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#hero p {
+    font-size: 2em;
+    margin: 0.5em 0 0 0;
+}
+
+#call-to-action {
+    margin-top: 8em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2em;
+    width: min(90vw, 34rem);
+}
+
+#call-to-action button:first-child {
+    justify-self: end;
+}
+
+#call-to-action button:last-child {
+    justify-self: start;
+}
+
+.action-button {
+    position: relative;
+    padding: 0.5em 1em;
+    font-family: monospace;
+    font-size: 1.2em;
+    border: solid var(--text-color) 2px;
+    color: var(--text-color);
+    background-color: transparent;
+    border-radius: 2em;
+    cursor: pointer;
+}
+
+.action-button::after {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: var(--accent-color);
+    left: 1em;
+    top: 0;
+    width: 0;
+    height: 101%;
+    z-index: -1;
+    border-radius: 2em;
+    transition: width 0.3s ease, left 0.05s ease;
+}
+
+.action-button:hover::after {
+    left: 0;
+    width: 101%;
+}
+
+#sec-home h2 {
+    font-family: monospace;
+    font-size: 3em;
+}
+
+#sec-home h2::after {
+    display: none;
+}
+
+/* Section h2 highlight colours */
+
+#sec-strings h2::after {
+    background-color: var(--strings);
+}
+
+#sec-winds h2::after {
+    background-color: var(--winds);
+}
+
+#sec-percussions h2::after {
+    background-color: var(--percussions);
+}
+
+#sec-course h2::after {
+    background-color: var(--accent-color);
+}
+
+/* ==========================================
+   THEME TOGGLE
+   ========================================== */
+
+#theme-toggle {
+    margin-right: 2em;
+    width: 3em;
+    height: 3em;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0;
+}
+
+#theme-toggle svg {
+    fill: var(--bg-color);
+}
+
+#theme-toggle svg:last-child {
+    display: none;
+}
+
+.dark-mode #theme-toggle svg:first-child {
+    display: none;
+}
+.dark-mode #theme-toggle svg:last-child {
+    display: block;
+}
+
+/* ==========================================
+   COURSE SECTION
+   ========================================== */
+
+form {
+    max-width: 40rem;
+    margin: 2rem auto;
+    border: 1px solid var(--text-color);
+    padding: 2rem;
+    border-radius: 12px;
+}
+
+fieldset {
+    border: 1px solid var(--text-color);
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 0;
+}
+
+legend {
+    font-weight: 700;
+    padding: 0 0.5rem;
+}
+
+label {
+    display: block;
+    margin-top: 0.8rem;
+    font-weight: 700;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"] {
+    width: 90%;
+    padding: 0.6rem;
+    margin-top: 0.2rem;
+    border: 1px solid var(--text-color);
+    border-radius: 6px;
+    background: #fff;
+    color: #000;
+    font-size: 1rem;
+}
+
+input[type="range"] {
+    width: 90%;
+    margin-top: 0.4rem;
+    accent-color: var(--accent-color);
+}
+
+input:required:invalid {
+    border-color: #bf1f1f;
+}
+
+input:required:valid {
+    border-color: #1a8a3f;
+}
+
+output {
+    display: block;
+    margin-top: 0.3rem;
+    font-size: 0.95rem;
+}
+
+input:focus-visible,
+button:focus-visible,
+a:focus-visible {
+    outline: 3px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
+#button-holder {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+/* ==========================================
+   FOOTER
+   ========================================== */
+
+footer {
+    background-color: var(--footer-bg);
+    text-align: center;
+    padding: 24px 0;
+}
+
+footer p {
+    color: var(--footer-text);
+    font-size: 0.8em;
+}
+
+footer a {
+    margin: 0;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    vertical-align: middle;
+}
+
+footer #html-validation {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 88px;
+    height: 31px;
+    border: 1px solid var(--footer-text);
+    color: var(--footer-text);
+    font-size: 0.8em;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* ==========================================
+   RESPONSIVE
+   ========================================== */
+
+@media (max-width: 1500px) {
+    body {
+        font-size: 1.1em;
+    }
+    .instrument-container {
+        width: 70%;
+    }
+}
+
+@media (max-width: 980px) {
+    .instrument-container {
+        width: 100%;
+        max-width: 100%;
+        align-self: stretch;
+    }
+}
+
+@media (max-width: 700px) {
+    body {
+        font-size: 1em;
+    }
+
+    header {
+        align-items: flex-start;
+        padding: 0.75rem 1rem;
+    }
+
+    nav {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #menu-toggle {
+        display: flex;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        margin-top: 0.75rem;
+    }
+
+    nav ul.is-open {
+        display: flex;
+    }
+
+    nav ul li {
+        padding: 0;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 0.9rem 0;
+        border-top: 1px solid rgba(72, 80, 89, 0.2);
+    }
+
+    #theme-toggle {
+        margin-right: 2em;
+    }
+
+    section {
+        padding-top: 7rem;
+    }
+
+    h1 {
+        font-size: 800%;
+    }
+
+    .instrument-container {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "icon"
+            "text"
+            "audio";
+        row-gap: 1.25rem;
+    }
+
+    .instrument-icon,
+    .instrument-audio {
+        width: min(16em, 100%);
+        margin: 0 auto;
+    }
+}
+
+/* ==========================================
+   ACCESSIBILITY
+   ========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+

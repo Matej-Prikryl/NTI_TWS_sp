@@ -1,0 +1,5 @@
+Options -Indexes
+AddDefaultCharset UTF-8
+
+# Use project homepage as a friendly fallback for 404s on this single-page site.
+ErrorDocument 404 /~matej.prikryl/sp/index.html
