@@ -49,6 +49,7 @@ body {
     margin: 0;
     background-color: var(--bg-color);
     color: var(--text-color);
+    width: 100%;
 }
 
 section {
@@ -712,6 +713,8 @@ footer #html-validation {
     font-size: 0.8em;
     border-radius: 4px;
     box-sizing: border-box;
+    width: 100%;
+    margin: 0;
 }
 
 /* ==========================================
